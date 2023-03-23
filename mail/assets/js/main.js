@@ -18,12 +18,17 @@ const inputMail = document.getElementById('email');
 
 buttonLogin.addEventListener('click', function(){
   let accessoNegato = true;
-  const mail = inputMail.value;
+  let mail = inputMail.value;
   for (let i = 0; i < utenti.length; i++) {
     const utenteConAccesso = utenti[i];
     if(mail === utenteConAccesso){      
       accessoNegato = false;
-      alert('bentornato');
     }    
   }; 
+  if(accessoNegato){
+    alert ('Errore nel Login')
+  }else{
+    alert ('Bentornato')
+  }
+  
 })  
